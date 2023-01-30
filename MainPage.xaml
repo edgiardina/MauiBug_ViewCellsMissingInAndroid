@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBug_ViewCellsMissingInAndroid.MainPage"                        
+             xmlns:fluent="clr-namespace:MauiIcons.Fluent;assembly=MauiIcons.Fluent" >
+
+    <TableView Intent="Settings" HasUnevenRows="True">
+        <TableRoot>
+            <TableSection Title="Notifications" TextColor="{StaticResource SecondaryTextColor}">
+                <SwitchCell Text="IFPA Rank Change" On="{Binding NotifyOnRankChange, Mode=TwoWay}" />
+                <SwitchCell Text="Tournament Result Posted" On="{Binding NotifyOnTournamentResult, Mode=TwoWay}" />
+                <SwitchCell Text="News Item Posted" On="{Binding NotifyOnNewBlogPost, Mode=TwoWay}" />
+            </TableSection>
+            <TableSection Title="My Stats" TextColor="{StaticResource SecondaryTextColor}">
+                <ViewCell >
+                    <Image Source="https://s.gravatar.com/avatar/a34661252ff93712b82ec51d5ca96bed?s=80" />
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>
